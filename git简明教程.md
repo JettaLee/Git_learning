@@ -78,25 +78,24 @@ git diff
 git diff src/com/example/providertest/MainActivity.java 
 ```
 
-####撤销
+####撤销修改
 
-**版本库->工作区**
+1. 修改后，文件没有放入暂存区（即文件一直在工作区）：用`git checkout -- 文件名` 撤销工作区的改动（回到跟版本库一样的状态，即回到最近一次 `git commit`时的状态，所有改动全部清除）
 
-```
-git checkout -- 文件名
-```
+2. 修改后，文件放入暂存区，且文件没有再次修改（即文件已经进入暂存区）：分两步：先用 `git reset <文件名>` 撤销 `git add` 操作（此时更改仍留在工作区），再执行 `git checkout -- 文件名` 清除工作区的改动
+
+3. 修改后，文件放入暂存区，且文件再次修改：分三步：先用 `git checkout -- 文件名` 撤销工作区的改动，再用 `git reset <文件名>` 撤销 `git add` 操作（此时更改仍留在工作区），最后执行 `git checkout -- 文件名` 清除工作区的改动
+
+通过 `git checkout -- 文件名` 命令可以撤销文件在工作区的修改。  
+通过 `git reset 文件名` 命令可以撤销指定文件的 `git add` 操作，即这个文件在暂存区的修改。  
+通过 `git reset` 命令可以撤销之前的所有 `git add` 操作，即在暂存区的修改。
+
+
+**`git checkout -- 文件名` 命令中的 `--` 表示命令行在 `--` 之后没有更多的选项。这样的好处是，如果碰巧有一个分支与文件名重名，仍然可以恢复该文件，而不是切换到同名的分支。**
 
 
 **撤销未commit的修改**		
 
-```
-git checkout src/com/example/providertest/MainActivity.java 
-```
-**将修改的内容进行撤销**		
-
-```
-git reset HEAD src/com/example/providertest/MainActivity.java 
-```
 
 **查看提交记录** 			
 
