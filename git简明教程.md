@@ -1,4 +1,4 @@
-##Git简明教程
+## Git简明教程
 <br/><br/>
 
 首先搞清楚 工作区->暂存区->版本库 概念
@@ -17,7 +17,7 @@ git config --global user.name
 git config --global user.email 
 ```
 
-###命令行进入到项目的根目录下
+### 命令行进入到项目的根目录下
 
 <br />
 
@@ -78,7 +78,7 @@ git diff
 git diff src/com/example/providertest/MainActivity.java 
 ```
 
-####撤销修改
+#### 撤销修改
 
 1. 修改后，文件没有放入暂存区（即文件一直在工作区）：用`git checkout -- 文件名` 撤销工作区的改动（回到跟版本库一样的状态，即回到最近一次 `git commit`时的状态，所有改动全部清除）
 
