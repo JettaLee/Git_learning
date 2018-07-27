@@ -1,6 +1,9 @@
 ##Git简明教程
-<br /><br />
-**配置身份	**
+<br/><br/>
+
+首先搞清楚 工作区->暂存区->版本库 概念
+
+**配置身份**
 
 ```
 git config --global user.name "Tony"
@@ -17,6 +20,7 @@ git config --global user.email
 ###命令行进入到项目的根目录下
 
 <br />
+
 **创建代码仓库**	
 
 ```
@@ -63,7 +67,7 @@ git status
 ```
 
 
-**查看到所有文件的更改内容。减号代表删除的部分,加号代表添加的部分。  **			
+**查看到所有文件的更改内容。减号代表删除的部分,加号代表添加的部分**
 
 ```
 git diff 		
@@ -74,6 +78,13 @@ git diff
 git diff src/com/example/providertest/MainActivity.java 
 ```
 
+####撤销
+
+**版本库->工作区**
+
+```
+git checkout -- 文件名
+```
 
 
 **撤销未commit的修改**		
