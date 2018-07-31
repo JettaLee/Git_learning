@@ -120,7 +120,3 @@ git log 2e7c0547af28cc1e9f303a4a1126fddbb704281b -1 –p
 ```
 git merge <branch>
 ```
-
-
-
-this is what need to be deleted
