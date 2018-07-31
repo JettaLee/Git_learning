@@ -114,3 +114,13 @@ git log 2e7c0547af28cc1e9f303a4a1126fddbb704281b -1      //注意这里是1
 ```
 git log 2e7c0547af28cc1e9f303a4a1126fddbb704281b -1 –p
 ```
+
+将分支<branch> 合并到当前所在分支，如果是<origin/branch>，则合并的是
+
+```
+git merge <branch>
+```
+
+
+
+this is what need to be deleted
